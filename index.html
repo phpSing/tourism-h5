@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <!--
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <title>旅游</title>
+    <script>
+        function adaptFont() {
+          var maxWidth = 750,
+              minWidth = 320,
+              minSize = 16,
+              currentWidth = Math.min(document.documentElement.getBoundingClientRect().width, maxWidth);
+          //设置基准值
+          document.documentElement.style.fontSize =  (currentWidth/minWidth)*minSize + 'px';
+        }
+
+        adaptFont();
+        window._TRACK_AUTO_SEND = false;
+        window.addEventListener("resize", adaptFont);
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
