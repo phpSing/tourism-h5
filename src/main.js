@@ -7,7 +7,7 @@ import { sync } from 'vuex-router-sync'
 
 import App from './App'
 import VuexStore from './store'
-import { basePath } from './common/constants'
+// import { basePath } from './common/constants'
 import { routes } from './router'
 
 Vue.use(Vuex)
@@ -16,7 +16,7 @@ Vue.use(Router)
 const store = new Vuex.Store(VuexStore)
 const router = new Router({
   routes,
-  base: `${basePath}/`,
+  base: '/',
   mode: 'history',
   saveScrollPosition: true
 })

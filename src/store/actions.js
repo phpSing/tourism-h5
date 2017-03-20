@@ -1,5 +1,5 @@
 import * as types from './mutation-types'
-import * as apis from '../common/api'
+// import * as apis from '../common/api'
 import fetch from '../common/fetch'
 import Cookie from 'js-cookie'
 
@@ -19,38 +19,38 @@ export const hideAlert = ({commit, state}, param) => {
   commit(types.HIDE_ALERT, '')
 }
 
-export const login = async ({commit, state}, param) => {
+// export const login = async ({commit, state}, param) => {
 
-  let res
+//   let res
 
-  try {
+//   try {
 
-    res = await fetch(apis.API_LOGIN, param, {method: 'POST'})
+//     res = await fetch(apis.API_LOGIN, param, {method: 'POST'})
 
-  } catch (e) {
-    console.log(e);
-    // commit(types.SHOW_ALERT, e)
+//   } catch (e) {
+//     console.log(e);
+//     // commit(types.SHOW_ALERT, e)
 
-  } finally {
+//   } finally {
 
-    if (res.status == 1) {
+//     if (res.status == 1) {
 
-      let data = res.dataresult
+//       let data = res.dataresult
 
-      for (let i = 0; i < Object.keys(data).length; i++) {
+//       for (let i = 0; i < Object.keys(data).length; i++) {
 
-        let key = Object.keys(data)[i]
+//         let key = Object.keys(data)[i]
 
-        localStorage.setItem(key, data[key])
-        localStorage.setItem('PHPSESSID', data[`session_id`])
-        Cookie.set(key, data[key])
-        Cookie.set(`PHPSESSID`, data[`session_id`])
+//         localStorage.setItem(key, data[key])
+//         localStorage.setItem('PHPSESSID', data[`session_id`])
+//         Cookie.set(key, data[key])
+//         Cookie.set(`PHPSESSID`, data[`session_id`])
 
-      }
+//       }
 
-      commit(types.GET_LOGIN_INFO, data)
-      // commit(types.SHOW_ALERT, '登陆成功')
-    }
+//       commit(types.GET_LOGIN_INFO, data)
+//       // commit(types.SHOW_ALERT, '登陆成功')
+//     }
 
-  }
-}
+//   }
+// }

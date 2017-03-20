@@ -6,7 +6,7 @@
       <div class="btn">
         <button v-for="item in buttonList" @click="item.event()" v-text="item.text"/>
       </div>
-    <div>
+    </div>
   </div>
 </template>
 

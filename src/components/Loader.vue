@@ -3,7 +3,7 @@
     <div class="content">
       <i/>
       <p>加载中...</p>
-    <div>
+    </div>
   </div>
 </template>
 
